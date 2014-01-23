@@ -39,3 +39,6 @@
             (if (= x (dec m))
               (solve new-grid 0 (inc y))
               (solve new-grid (inc x) y))))))))
+
+(defn solve2 [grid]
+  (solve (partition-all 9 grid) 0 0))
