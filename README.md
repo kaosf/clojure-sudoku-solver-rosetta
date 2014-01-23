@@ -32,3 +32,14 @@ nil
 ## References
 
 * [Sudoku - Rosetta Code](http://rosettacode.org/wiki/Sudoku#Clojure)
+
+## Tips
+
+How to print "stack-trace"
+
+```clj
+(require 'clojure.stacktrace)
+(clojure.stacktrace/print-stack-trace *e 10)
+```
+
+ref. [clojureのreplでstacktraceを見る - エンジニアですよ！](http://totem3.hatenablog.jp/entry/2013/10/22/055734)
