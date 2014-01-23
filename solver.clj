@@ -41,4 +41,6 @@
               (solve new-grid (inc x) y))))))))
 
 (defn solve2 [grid]
-  (solve (partition-all 9 grid) 0 0))
+  (solve
+    (vec (map vec (partition-all 9 grid)))
+    0 0))
