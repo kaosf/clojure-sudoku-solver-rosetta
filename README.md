@@ -55,3 +55,9 @@ How to print "stack-trace"
 ```
 
 ref. [clojureのreplでstacktraceを見る - エンジニアですよ！](http://totem3.hatenablog.jp/entry/2013/10/22/055734)
+
+## License
+
+[MIT](http://opensource.org/licenses/MIT)
+
+Copyright 2014 ka
