@@ -1,13 +1,6 @@
 (ns sudoku
   (:use [clojure.math.numeric-tower :only (sqrt)]))
 
-(defn print-grid [grid]
-  (doseq [y (range (count grid))]
-    (doseq [x (range (count grid))]
-      (print (retrieve grid x y) " "))
-    (println))
-  (println))
-
 (defn retrieve [grid x y]
   (get (get grid y) x))
 
@@ -28,6 +21,13 @@
     (zero? (retrieve grid x y))
     (every? #(and (not= n (retrieve grid % y)) (not= n (retrieve grid x %))) (range (count grid)))
     (every? #(not= n (retrieve grid (first %) (second %))) (coordinates grid x y)))))
+
+(defn print-grid [grid]
+  (doseq [y (range (count grid))]
+    (doseq [x (range (count grid))]
+      (print (retrieve grid x y) " "))
+    (println))
+  (println))
 
 (defn solve [grid x y]
   (let [m (count grid)]
