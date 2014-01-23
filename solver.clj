@@ -1,5 +1,5 @@
 (ns sudoku
-  (:use [clojure.contrib.math :only (sqrt)]))
+  (:use [clojure.math.numeric-tower :only (sqrt)]))
 
 (defn print-grid [grid]
   (doseq [y (range (count grid))]
