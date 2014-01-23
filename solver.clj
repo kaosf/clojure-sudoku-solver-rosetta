@@ -25,8 +25,10 @@
 (defn print-grid [grid]
   (doseq [y (range (count grid))]
     (doseq [x (range (count grid))]
-      (print (retrieve grid x y) " "))
-    (println))
+      (print (retrieve grid x y) " ")
+      (if (= (rem x 3) 2) (print " ")))
+    (println)
+    (if (= (rem y 3) 2) (println)))
   (println))
 
 (defn solve [grid x y]
