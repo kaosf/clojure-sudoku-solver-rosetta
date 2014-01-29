@@ -1,5 +1,5 @@
 (ns sudoku
-  (:use [clojure.math.numeric-tower :only (sqrt)]))
+  (:require [clojure.math.numeric-tower :refer (sqrt)]))
 
 (defn retrieve [grid x y]
   (get (get grid y) x))
