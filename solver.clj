@@ -16,11 +16,11 @@
 
 (defn compatible? [grid x y n]
   (or
-   (= n (retrieve grid x y))
-   (and
-    (zero? (retrieve grid x y))
-    (every? #(and (not= n (retrieve grid % y)) (not= n (retrieve grid x %))) (range (count grid)))
-    (every? #(not= n (retrieve grid (first %) (second %))) (coordinates grid x y)))))
+    (= n (retrieve grid x y))
+    (and
+      (zero? (retrieve grid x y))
+      (every? #(and (not= n (retrieve grid % y)) (not= n (retrieve grid x %))) (range (count grid)))
+      (every? #(not= n (retrieve grid (first %) (second %))) (coordinates grid x y)))))
 
 (defn print-grid [grid]
   (doseq [y (range (count grid))]
