@@ -1,6 +1,6 @@
 # Clojure Sudoku Solver
 
-## How to use
+## Usage
 
 Add `[org.clojure/math.numeric-tower "0.0.4"]` to `$HOME/.lein/profiles.clj`.
 
