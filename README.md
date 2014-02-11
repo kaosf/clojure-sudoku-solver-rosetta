@@ -2,13 +2,6 @@
 
 ## Usage
 
-Add `[org.clojure/math.numeric-tower "0.0.4"]` to `$HOME/.lein/profiles.clj`.
-
-```clj
-{:user
- {:plugins [[org.clojure/math.numeric-tower "0.0.4"]]}}
-```
-
 Launch REPL by `lein repl` and input following code;
 
 ```clj
