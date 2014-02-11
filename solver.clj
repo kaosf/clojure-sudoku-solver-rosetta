@@ -1,5 +1,4 @@
-(ns sudoku
-  (:require [clojure.math.numeric-tower :refer (sqrt)]))
+(ns sudoku)
 
 (defn retrieve [grid x y]
   (get (get grid y) x))
@@ -8,7 +7,7 @@
   (assoc grid y (assoc (get grid y) x n)))
 
 (defn coordinates [grid x y]
-  (let [n (sqrt (count grid))
+  (let [n (.intValue (Math/sqrt (count grid)))
         zx (* n (quot x n))
         zy (* n (quot y n))]
     (for [x (range zx (+ zx n)) y (range zy (+ zy n))]
